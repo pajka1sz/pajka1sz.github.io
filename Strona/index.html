@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>Architektura współczesna</title>
+	<link rel="icon" type="img" href="Oculus.png">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<!--<body bgcolor="#99cc00">-->
+<body bgcolor="#f5f5f5">
+	<font face="Ubuntu">
+	<!--<script>
+		var index = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			index++;
+			if (index > x.length) {
+				index = 1;
+			}
+			x[index-1].style.display = "block";
+			setTimeout(carousel, 5000);
+		}
+
+	</script>-->
+<section class="mainbuttons">
+	<section class="slideshow-container">
+
+		<div class="mySlides fade">
+			<div class="location">Billund, Dania</div>
+			<img src="Lego House.jpg" style="width: 100%; border-radius: 5px;">
+			<div class="textphoto">LEGO House</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="location" style="color: black;">Nowy Jork, USA</div>
+			<img src="Oculuswnetrze.jpg" style="width: 100%; border-radius: 5px;">
+			<div class="textphoto">Oculus</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="location">Baku, Azerbejdżan</div>
+			<img src="Heydarcenter2.jpg" style="width: 100%; border-radius: 5px;">
+			<div class="textphoto">Heydar Aliyev Center</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="location">Mountain View, USA</div>
+			<img src="Googletop.png" style="width: 100%; border-radius: 5px;">
+			<div class="textphoto">Siedziba Google</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="location">Reggio Emilia, Włochy</div>
+			<img src="Reggiotop.png" style="width: 100%; border-radius: 5px;">
+			<div class="textphoto">Reggio Mediopadana</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="location">Sharjah, ZEA</div>
+			<img src="Beaahtop.png" style="width: 100%; border-radius: 5px;">
+			<div class="textphoto">Siedziba BEEAH</div>
+		</div>
+	</section>
+
+	<script>
+		let slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+  			let i;
+  			let slides = document.getElementsByClassName("mySlides");
+  			let dots = document.getElementsByClassName("mySlides");
+  			for (i = 0; i < slides.length; i++) {
+    			slides[i].style.display = "none";  
+  			}
+  			slideIndex++;
+  			if (slideIndex > slides.length) {slideIndex = 1}    
+  			for (i = 0; i < dots.length; i++) {
+    			dots[i].className = dots[i].className.replace(" active", "");
+  			}
+  			slides[slideIndex-1].style.display = "block";  
+  			dots[slideIndex-1].className += " active";
+  			setTimeout(showSlides, 5000); // Change image every 5 seconds
+		}
+	</script>
+
+
+	<section class="topnav" id="myTopnav">
+  		<a class="active2" id="homeid" style="font-size: 30px;">Architekci</a>
+  		<div class="dropdown">
+    		<button class="dropbtn">Europa 
+      			<!-- <i class="fa fa-caret-down"></i> -->
+    		</button>
+    		<div class="dropdown-content">
+      			<a id="legodrop"><img src="LEGOHouse3.png" style="width: 40px;"> LEGO House</a>
+      			<a id="copenhilldrop"><img src="Copenhill.png" style="width: 40px;"> CopenHill</a>
+      			<a id="havenhuisdrop"><img src="Havenhuis.png" style="width: 50px;">Havenhuis</a>
+      			<a id="reggiodrop"><img src="Reggio.png" style="width: 40px;"> Reggio Mediopadana</a>
+    		</div>
+  		</div>
+  		<div class="dropdown">
+    		<button class="dropbtn">Ameryka Płn. i Płd. 
+      			<i class="fa fa-caret-down"></i>
+    		</button>
+    		<div class="dropdown-content">
+
+      			<a id="googledrop"><img src="Google.png" style="width: 50px;"> Google Headquarters</a>
+      			<a id="milwaukeedrop"><img src="Milwaukee.png" style="width: 50px;"> Milwaukee Art Museum</a>
+      			<a id="oculusdrop"><img src="Oculus.png" style="width: 50px">  Oculus</a>
+      			<a id="iqondrop"><img src="IQON.png" style="width: 50px;"> IQON Residences</a>
+    		</div>
+  		</div>
+  		<div class="dropdown">
+    		<button class="dropbtn">Azja 
+      			<i class="fa fa-caret-down"></i>
+    		</button>
+    		<div class="dropdown-content">
+      			<a id="heydardrop"><img src="Heydar.png" style="width: 60px;"> Heydar Aliyev Center</a>
+      			<a id="pekindrop"><img src="Pekin.png" style="width: 60px;">  Lotnisko w Pekinie</a>
+      			<a id="beeahdrop"><img src="BEEAH.png" style="width: 60px;"> Siedziba BEEAH</a>
+      			<a id="sharqdrop"><img src="SHARQ2.png" style="width: 60px;"> Sharq Crossing</a>
+    		</div>
+  		</div>
+  		<a id="ankietanav">Ankieta</a> 
+  		<a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</section>
+
+	<script>
+		function myFunction() {
+  			var x = document.getElementById("myTopnav");
+  			if (x.className === "topnav") {
+    			x.className += " responsive";
+  			} else {
+    			x.className = "topnav";
+  			}
+		}
+	</script>
+
+
+	
+	<!--<nav id="nav">
+		<div class="nawigacja">
+			<a class="main" href="Mikroprojekt.html"><b>Start</b></a>
+			<a href="europe">Europa</a>
+			<a href="america">Ameryka Płn. i Płd.</a>
+			<a href="asia">Azja</a>
+		</div>
+	</nav>-->
+	<!--<div class="flex-container">
+		<div style="flex-grow: 1; text-align: center;">
+			<img src="Bjarke-Ingels-main.jpg">
+			<H1>Bjarke Ingels</H1>
+			<p style="width: 40%; padding-left: 30%;">Duński architekt, założyciel grupy BIG - Bjarke Ingels Group. Jego projekty prezentują egalitarne podejście do architektury, skupiając się na potrzebach ludzi korzystających z budynków.</p>
+		</div>
+		<div style="flex-grow: 1; text-align: center;" class="ZahaHadid">
+			<img src="Zaha Hadid.jpg">
+			<H1>Zaha Hadid</H1>
+			<p style="width: 40%; padding-left: 30%;">Pochodząca z Iraku brytyjska architektka, reprezentantka futuryzmu i dekonstruktywizmu. Jej projekty charakteryzują się ostrymi kątami i zakrzywionymi płaszczyznami.</p>
+		</div>
+		<div style="flex-grow: 1; text-align: center;" class="Santiago">
+			<img src="Santiago2.jpg">
+			<H1>Santiago Calatrava</H1>
+			<p style="width: 40%; padding-left: 30%;">Hiszpański architekt i inżynier budownictwa znany z lekkich budowli, często inspirowanych przyrodą. Wybudował wiele niekonwencjonalnych budynków, ale także mostów i wiaduktów.</p>
+		</div>
+	</div>-->
+
+		<section class="glowna">
+			<div style="text-align: center; text-shadow: 2px 2px 4px grey; font-weight: bold; font-size: 40px; margin-bottom: 3%; color: #186355;">Współcześni architekci</div>
+			<div class="rzad">
+				<div class="responsive" style="text-align: center;" id="big">
+			  		<a style="text-decoration: none;">
+			  			<div class="gallery">
+			    			<img src="Bjarke-Ingels-main2.jpg" alt="BIG" width="600" height="400">
+			    		
+			    		
+			    			<div class="archiname">Bjarke Ingels</div>
+			    			<!--<p style="width: 40%; padding-left: 30%">Duński architekt, założyciel grupy BIG - Bjarke Ingels Group. Jego projekty prezentują egalitarne podejście do architektury, skupiając się na potrzebach ludzi korzystających z budynków.</p>-->
+			    			<div class="desc" >Duński architekt, założyciel grupy BIG - Bjarke Ingels Group. Jego projekty prezentują egalitarne podejście do architektury, skupiając się na potrzebach ludzi korzystających z budynków. Propaguje koncepcję zwaną „hedonistycznym zrównoważonym rozwojem".</div>
+			  			</div>
+			  		</a>
+				</div>
+
+				<div class="responsive" style="text-align: center;" id="zaha">
+				  	<a style="text-decoration: none;">
+				  		<div class="gallery">
+				    		
+				      		<img src="Zaha Hadid2.jpg" alt="BIG" width="600" height="400">
+				    		
+				    		
+				    		<div class="archiname">Zaha Hadid</div>
+				    		<!--<p style="text-align: center; padding-left: 20%; padding-right: 20%;">Pochodząca z Iraku brytyjska architektka, reprezentantka futuryzmu i dekonstruktywizmu. Jej projekty charakteryzują się ostrymi kątami i zakrzywionymi płaszczyznami.</p>-->
+				    		<div class="desc">Pochodząca z Iraku brytyjska architektka, reprezentantka futuryzmu i dekonstruktywizmu. Jej projekty charakteryzują się ostrymi kątami i zakrzywionymi płaszczyznami. Twórczość projektantki można podziwiać głównie w krajach azjatyckich, ale również w Europie.</div>
+				  		</div>
+				  	</a>
+				</div>
+
+				<div class="responsive" style="text-align: center;" id="santiago">
+				  	<a style="text-decoration: none;">
+				  		<div class="gallery">
+				      		<img src="Santiago2.jpg" alt="BIG" width="600" height="400">
+				    		
+				    		
+				    		<div class="archiname" style="/*font-size: 210%;*margin-bottom: 2%;*/">Santiago Calatrava</div>
+				    		<!--<p style="text-align: center; padding-left: 20%; padding-right: 20%;">Pochodząca z Iraku brytyjska architektka, reprezentantka futuryzmu i dekonstruktywizmu. Jej projekty charakteryzują się ostrymi kątami i zakrzywionymi płaszczyznami.</p>-->
+				    		<div class="desc">Hiszpański architekt i inżynier budownictwa znany z lekkich budowli, często inspirowanych przyrodą. Wybudował wiele niekonwencjonalnych budynków, ale także mostów.</div>
+				  		</div>
+				  	</a>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="responsivetwo" id="bigid">
+			<div class="architekt">
+				<img src="Bjarke-Ingels-main2.jpg">
+				<div class="archiname">Bjarke Ingels</div>
+				<hr style="width: 80%;">
+				<div class="opis">
+					<b>Pochodzenie:</b>
+					 Dania
+					<br>
+					<b>Data urodzenia:</b>
+					 2 października 1974
+					<br>
+					<b>Styl projektowania: </b>
+					 prostota, zrównoważone tworzywa, zgoda z naturą, dostępność dla ludzi
+				</div>
+			</div>
+			<div class="galeria">
+				<div class="rzad">
+					<div class="kolumna">
+						<div class="budynki" style="border-radius: 15px;" id="lego">
+							<img src="LegoHouseBudynek.jpeg" style="opacity: 30%; border-radius: 15px;">
+							<div class="ikonabudynku"><img src="LEGOHouse3.png"></div>
+							<div class="nazwabudynku">LEGO House</div>
+						</div>
+						<div class="budynki" style="margin-top: 2%; border-radius: 15px;" id="iqon">
+							<img src="IQONBudynek.jpg" style="opacity: 30%; border-radius: 15px;">
+							<div class="ikonabudynku"><img src="IQON2.png"></div>
+							<div class="nazwabudynku" style="text-align: center;">IQON Residences</div>
+						</div>
+					</div>
+					<div class="kolumna">
+						<div class="budynki" style="border-radius: 15px;" id="copenhill">
+							<img src="CopenhillBudynek.png" style="opacity: 30%; border-radius: 15px;">
+							<div class="ikonabudynku"><img src="Copenhill.png"></div>
+							<div class="nazwabudynku" style="text-align: center;">CopenHill</div>
+						</div>
+						<div class="budynki" style="margin-top: 2%; border-radius: 15px;" id="google">
+							<img src="GoogleBudynek.png" style="opacity: 30%; border-radius: 15px;">
+							<div class="ikonabudynku"><img src="Google.png"></div>
+							<div class="nazwabudynku">Siedziba Google</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section> <!--responsive2 big-->
+
+		<section class="responsivetwo" id="zahaid">
+			<div class="architekt">
+				<img src="Zaha Hadid2.jpg">
+				<div class="archiname">Zaha Hadid</div>
+				<hr style="width: 80%;">
+				<div class="opis">
+					<b>Pochodzenie:</b>
+					 Irak
+					<br>
+					<b>Data urodzenia:</b>
+					 31 października 1950
+					<br>
+					<b>Data śmierci:</b>
+					 31 marca 2016
+					<br>
+					<b>Styl projektowania: </b>
+					 futuryzm, zakrzywione powierzchnie, ostre kąty, beton i stal
+				</div>
+			</div>
+			<div class="galeria">
+				<div class="rzad">
+					<div class="kolumna" style="/*margin-left: 3%;*/">
+						<div class="budynki" style="border-radius: 15px;" id="heydar">
+							<img class="zdjeciebudynku" src="HeydarBudynek.png">
+							<div class="ikonabudynku"><img src="Heydar2.png"></div>
+							<div class="nazwabudynku">Heydar Aliyev<br>Center</div>
+						</div>
+						<div class="budynki" style="margin-top: 2%; border-radius: 15px;" id="pekin">
+							<img class="zdjeciebudynku" src="PekinBudynek.png">
+							<div class="ikonabudynku"><img src="Pekin.png"></div>
+							<div class="nazwabudynku" style="text-align: center;">Lotnisko w Pekinie</div>
+						</div>
+					</div>
+					<div class="kolumna" style="/*margin-left: 1%;*/">
+						<div class="budynki" style="border-radius: 15px;" id="beeah">
+							<img class="zdjeciebudynku" src="BEEAHBudynek.png">
+							<div class="ikonabudynku"><img src="BEEAH.png"></div>
+							<div class="nazwabudynku" style="text-align: center;">Siedziba BEEAH</div>
+						</div>
+						<div class="budynki" style="margin-top: 2%; border-radius: 15px;" id="havenhuis">
+							<img class="zdjeciebudynku" src="HavenhuisBudynek.png">
+							<div class="ikonabudynku"><img src="Havenhuis.png"></div>
+							<div class="nazwabudynku">Havenhuis</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section> <!--responsive2 zaha-->
+
+		<section class="responsivetwo" id="santiagoid">
+			<div class="architekt">
+				<img src="Santiago2.jpg">
+				<div class="archiname" style="font-size: 250%;">Santiago Calatrava</div>
+				<hr style="width: 80%;">
+				<div class="opis">
+					<b>Pochodzenie:</b>
+					 Hiszpania
+					<br>
+					<b>Data urodzenia:</b>
+					 28 lipca 1951
+					<br>
+					<b>Styl projektowania: </b>
+					 dynamiczny, lekki, inżynieryjny, inspirowany naturą
+				</div>
+			</div>
+			<div class="galeria">
+				<div class="rzad">
+					<div class="kolumna">
+						<div class="budynki" style="border-radius: 15px;" id="oculus">
+							<img class="zdjeciebudynku" src="OculusBudynek.png">
+							<div class="ikonabudynku"><img src="Oculus.png"></div>
+							<div class="nazwabudynku">Oculus</div>
+						</div>
+						<div class="budynki" style="border-radius: 15px; margin-top: 2%;" id="reggio">
+							<img class="zdjeciebudynku" src="ReggioBudynek.jpg">
+							<div class="ikonabudynku"><img src="Reggio.png"></div>
+							<div class="nazwabudynku" style="text-align: center;">Reggio<br>Mediopadana</div>
+						</div>
+					</div>
+					<div class="kolumna">
+						<div class="budynki" style="border-radius: 15px;" id="milwaukee">
+							<img class="zdjeciebudynku" src="MilwaukeeBudynek.png">
+							<div class="ikonabudynku"><img src="Milwaukee.png"></div>
+							<div class="nazwabudynku" style="text-align: center;">Muzeum sztuki<br>w Milwaukee</div>
+						</div>
+						<div class="budynki" style="border-radius: 15px; margin-top: 2%;" id="sharq">
+							<img class="zdjeciebudynku" src="SHARQBudynek.png">
+							<div class="ikonabudynku" style="bottom: 45%; width: 50%; left: 25%; right: 25%;"><img src="SHARQ.png"></div>
+							<div class="nazwabudynku">SHARQ Crossing</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section> <!--responsive2 santiago-->
+
+
+		<section class="responsivethree" id="oculusid">
+			<div class="ikonka"><img src="Oculus.png"></div>
+			<div class="konstrukcja" style="border-left-color: #00aabd;">
+				<div class="opisbudynku">
+					<div class="buildname" style="color: /*#00d1e8*/#00aabd;">Oculus <b style="font-size: 50%;"> - dworzec metra</b></div>
+					<p style="line-height: 1.5;">
+						<b>Data otwarcia:</b> 3 marca 2016
+						<br>
+						<b>Przepustowość:</b> ponad 1 milion ludzi tygodniowo
+					</p>
+					<div class="lokalizacja"><a><b>Lokalizacja:</b> Nowy Jork, USA</a></div>
+				</div>
+			</div>
+			<div class="flaga" style="text-align: center; vertical-align: middle; border-left-color: #00aabd;">
+				<img src="USA.png">
+				<a style="width: 100%; text-align: right;">Nowy Jork</a>
+			</div>
+			<div class="imagegrid">
+				<div class="row">
+					<div class="column">
+						<img src="Oculus1.jpg">
+						<img src="Oculus2.jpg">
+					</div>
+					<div class="column">
+						<img src="Oculus3.jpg">
+						<img src="Oculus4.png">
+					</div>
+					<div class="column">
+						<img src="Oculus6.png">
+						<img src="Oculus5.png">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="responsivethree" id="milwaukeeid">
+			<div class="ikonka"><img src="Milwaukee.png"></div>
+			<div class="konstrukcja" style="border-left-color: #00aabd;">
+				<div class="opisbudynku">
+					<div class="buildname" style="color: #00aabd;">Muzeum sztuki w Milwaukee</div>
+					<p style="line-height: 1.5;">
+						<b>Data otwarcia:</b> 4 maja 2001<b>
+						<br>
+						Zawartość:</b> prawie 25000 dzieł sztuki
+					</p>
+					<div class="lokalizacja"><a><b>Lokalizacja:</b> Milwaukee, USA</a></div>
+				</div>
+			</div>
+			<div class="flaga" style="text-align: center; vertical-align: middle; border-left-color: #00aabd;">
+				<img src="USA.png">
+				<a style="width: 100%; text-align: right;">Milwaukee</a>
+			</div>
+			<div class="imagegrid">
+				<div class="row">
+					<div class="column">
+						<img src="Milwaukee1.png">
+						<img src="Milwaukee2.jpeg">
+					</div>
+					<div class="column">
+						<img src="Milwaukee5.jpg">
+						<img src="Milwaukee3.jpg">
+					</div>
+					<div class="column">
+						<img src="Milwaukee6.jpg">
+						<img src="Milwaukee7.jpg">
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="responsivethree" id="reggioid">
+			<div class="ikonka"><img src="Reggio.png"></div>
+			<div class="konstrukcja" style="border-left-color: #e87800;">
+				<div class="opisbudynku">
+					<div class="buildname" style="color: #e87800;">Reggio Mediopadana <b style="font-size: 50%;"> - dworzec kolejowy</b></div>
+					<p style="line-height: 1.5;">
+						<b>Data budowy:</b> 2002-2016
+						<br>
+						<b>Data otwarcia:</b> luty 2016
+					</p>
+					<div class="lokalizacja"><a><b>Lokalizacja:</b> Reggio Emilia, Włochy</a></div>
+				</div>
+			</div>
+			<div class="flaga" style="text-align: center; vertical-align: middle; border-left-color: #e87800;">
+				<img src="Włochy.png">
+				<a style="width: 100%;">Reggio Emilia</a>
+			</div>
+			
+			<div class="imagegrid">
+				<div class="row">
+					<div class="column">
+						<img src="Reggio1.jpg">
+						<img src="Reggio2.jpg">
+					</div>
+					<div class="column">
+						<img src="Reggio3.jpg">
+						<img src="Reggio5.jpg">
+					</div>
+					<div class="column">
+						<img src="Reggio4.jpg">
+						<img src="ReggioBudynek.jpg">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="responsivethree" id="sharqid">
+			<div class="ikonka" style="vertical-align: middle; flex: 25%;"><img src="SHARQ.png"></div>
+			<div class="konstrukcja" style="border-left-color: #501b85; flex: 60%;">
+					
+				<div class="opisbudynku">
+					<div class="buildname" style="color: /*#5902b0*/#501b85;">SHARQ Crossing <b style="font-size: 50%;"> - przeprawa morska</b></div>
+					<p style="line-height: 1.5;">
+						<b>Data budowy:</b> 2013-
+						<br>
+						<b>Funkcja:</b> połączenie lotniska z miastem i dystryktem handlowym
+					</p>
+					<div class="lokalizacja"><a><b>Lokalizacja:</b> Ad-Dauha, Katar</a></div>
+				</div>
+			</div>
+			<div class="flaga" style="text-align: center; vertical-align: middle; border-left-color: #501b85;">
+				<img src="Katar.png">
+				<a style="width: 100%;">Ad-Dauha</a>
+			</div>
+
+			<div class="imagegrid">
+				<div class="row">
+					<div class="column">
+						<img src="Sharq1.jpg">
+						<img src="Sharqq2.jpg">
+					</div>
+					<div class="column">
+						<img src="Sharq3.jpg">
+						<img src="Sharq5.jpeg">
+					</div>
+					<div class="column">
+						<img src="Sharq4.jpg">
+						<img src="Sharq6.jpg">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="responsivethree" id="heydarid">
+			<div class="ikonka"><img src="Heydar.png" style="flex: 24%;"></div>
+			<div class="konstrukcja" style="border-left-color: #501b85; flex: 61%;">
+					
+				<div class="opisbudynku">
+					<div class="buildname" style="color: /*#5902b0*/#501b85;">Heydar Aliyev Center <b style="font-size: 50%;"> - centrum kultury</b></div>
+					<p style="line-height: 1.5;">
+						<b>Data otwarcia:</b> 10 maja 2012
+						<br>
+						<b>Wysokość:</b> 74 metry
+					</p>
+					<div class="lokalizacja"><a><b>Lokalizacja:</b> Baku, Azerbejdżan</a></div>
+				</div>
+			</div>
+			<div class="flaga" style="text-align: center; vertical-align: middle; border-left-color: #501b85;">
+				<img src="Azer.png">
+				<a style="width: 100%;">Baku</a>
+			</div>
+
+			<div class="imagegrid">
+				<div class="row">
+					<div class="column">
+						<img src="Heydar1.jpg">
+						<img src="Heydar2.jpg">
+					</div>
+					<div class="column">
+						<img src="Heydar3.jpg">
+						<img src="Heydar4.jpg">
+					</div>
+					<div class="column">
+						<img src="Heydarcenter.jpg">
+						<img src="Heydar6.jpg">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="responsivethree" id="pekinid">
+			<div class="ikonka"><img src="Pekin.png"></div>
+			<div class="konstrukcja" style="border-left-color: #501b85;">
+					
+				<div class="opisbudynku">
+					<div class="buildname" style="color: /*#5902b0*/#501b85;">Lotnisko Daxing w Pekinie</div>
+					<p style="line-height: 1.5;">
+						<b>Data otwarcia:</b> 26 września 2019
+						<br>
+						<b>Powierzchnia:</b> 2679 hektarów
+					</p>
+					<div class="lokalizacja"><a><b>Lokalizacja:</b> Pekin, Chiny</a></div>
+				</div>
+			</div>
+			<div class="flaga" style="text-align: center; vertical-align: middle; border-left-color: #501b85;">
+				<img src="Chiny.png">
+				<a style="width: 100%;">Pekin</a>
+			</div>
+
+			<div class="imagegrid">
+				<div class="row">
+					<div class="column">
+						<img src="Pekin1.jpg">
+						<img src="Pekin2.jpg">
+					</div>
+					<div class="column">
+						<img src="Pekin3.jpg">
+						<img src="Pekin4.png">
+					</div>
+					<div class="column">
+						<img src="Pekin5.png">
+						<img src="Pekin6.png">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="responsivethree" id="havenid">
+			<div class="ikonka" style="flex: 25%;"><img src="Havenhuis.png"></div>
+			<div class="konstrukcja" style="border-left-color: #e87800; flex: 60%;">
+					
+				<div class="opisbudynku">
+					<div class="buildname" style="color: /*#5902b0*/#e87800;">Havenhuis <b style="font-size: 50%;">- budynek rządowy</b></div>
+					<p style="line-height: 1.5;">
+						<b>Data budowy:</b> 2009-2016
+						<br>
+						<b>Wysokość:</b> 46 metrów
+					</p>
+					<div class="lokalizacja"><a><b>Lokalizacja:</b> Antwerpia, Belgia</a></div>
+				</div>
+			</div>
+			<div class="flaga" style="text-align: center; vertical-align: middle; border-left-color: #e87800;">
+				<img src="Belgia.png">
+				<a style="width: 100%;">Antwerpia</a>
+			</div>
+
+			<div class="imagegrid">
+				<div class="row">
+					<div class="column">
+						<img src="Havenhuis1.jpg">
+						<img src="Havenhuis2.jpg">
+					</div>
+					<div class="column">
+						<img src="Havenhuis3.jpg">
+						<img src="Havenhuis4.jpg">
+					</div>
+					<div class="column">
+						<img src="Havenhuis5.jpg">
+						<img src="Havenhuis6.jpg">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="responsivethree" id="beeahid">
+			<div class="ikonka" style="flex: 28%;"><img src="BEEAH.png"></div>
+			<div class="konstrukcja" style="border-left-color: #501b85; flex: 57%;">
+					
+				<div class="opisbudynku">
+					<div class="buildname" style="color: /*#5902b0*/#501b85;">Siedziba BEEAH <b style="font-size: 50%;">- centrala firmy</b></div>
+					<p style="line-height: 1.5;">
+						<b>Data otwarcia:</b> 2022
+						<br>
+						<b>Inspiracja:</b> pustynne wydmy i wiatr
+					</p>
+					<div class="lokalizacja"><a><b>Lokalizacja:</b> Sharjah, Zjednoczone Emiraty Arabskie</a></div>
+				</div>
+			</div>
+			<div class="flaga" style="text-align: center; vertical-align: middle; border-left-color: #501b85;">
+				<img src="ZEA.png">
+				<a style="width: 100%;">Sharjah</a>
+			</div>
+
+			<div class="imagegrid">
+				<div class="row">
+					<div class="column">
+						<img src="Beeah1.jpg">
+						<img src="Beeah2.jpg">
+					</div>
+					<div class="column">
+						<img src="Beeah3.jpg">
+						<img src="Beeah4.jpg">
+					</div>
+					<div class="column">
+						<img src="Beeah5.jpg">
+						<img src="Beeah6.jpg">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="responsivethree" id="legoid">
+			<div class="ikonka"><img src="LEGOHouse3.png"></div>
+			<div class="konstrukcja" style="border-left-color: #e87800;">
+					
+				<div class="opisbudynku">
+					<div class="buildname" style="color: #e87800;">LEGO House <b style="font-size: 50%;">- centrum klocków LEGO</b></div>
+					<p style="line-height: 1.5;">
+						<b>Data otwarcia:</b> 28 września 2017
+						<br>
+						<b>Forma:</b> 21 przesuniętych bloków przepominającyh klocki LEGO
+					</p>
+					<div class="lokalizacja"><a><b>Lokalizacja:</b> Billund, Dania</a></div>
+				</div>
+			</div>
+			<div class="flaga" style="text-align: center; vertical-align: middle; border-left-color: #e87800;">
+				<img src="Dania.png">
+				<a style="width: 100%;">Billund</a>
+			</div>
+
+			<div class="imagegrid">
+				<div class="row">
+					<div class="column">
+						<iframe style="height: 200px; width: 100%;" src="https://www.youtube.com/embed/278AeaEPGwY?si=gKB1KiLqZkyyrnMl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<img src="LH2.jpg">
+					</div>
+					<div class="column">
+						<img src="LH3.jpg">
+						<img src="LH4.jpg">
+					</div>
+					<div class="column">
+						<img src="LH5.jpeg">
+						<img src="LH7.jpg">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="responsivethree" id="copenhillid">
+			<div class="ikonka"><img src="Copenhill.png"></div>
+			<div class="konstrukcja" style="border-left-color: #e87800;">
+					
+				<div class="opisbudynku">
+					<div class="buildname" style="color: #e87800;">CopenHill <b style="font-size: 50%;">- elektrociepłownia i spalarnia odpadów</b></div>
+					<p style="line-height: 1.5;">
+						<b>Data otwarcia:</b> 30 marca 2017
+						<br>
+						<b>Dodatkowa rola:</b> stok narciarski, ścieżki spacerowe i największa na świecie ściana wspinaczkowa
+					</p>
+					<div class="lokalizacja"><a><b>Lokalizacja:</b> Kopenhaga, Dania</a></div>
+				</div>
+			</div>
+			<div class="flaga" style="text-align: center; vertical-align: middle; border-left-color: #e87800;">
+				<img src="Dania.png">
+				<a style="width: 100%;">Kopenhaga</a>
+			</div>
+
+			<div class="imagegrid">
+				<div class="row">
+					<div class="column">
+						<iframe style="height: 200px; width: 100%;" src="https://www.youtube.com/embed/Zdw62f0pcbo?si=-6D_uG7qdTZmk_VG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<img src="Copenhill2.jpg">
+					</div>
+					<div class="column">
+						<img src="Copenhill3.jpg">
+						<img src="Copenhill4.jpg">
+					</div>
+					<div class="column">
+						<img src="Copenhill5.jpg">
+						<img src="Copenhill6.jpg">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="responsivethree" id="iqonid">
+			<div class="ikonka"><img src="IQON.png"></div>
+			<div class="konstrukcja" style="border-left-color: #00aabd;">
+					
+				<div class="opisbudynku">
+					<div class="buildname" style="color: #00aabd;">IQON Residences <b style="font-size: 50%;">- budynek mieszkalny</b></div>
+					<p style="line-height: 1.5;">
+						<b>Data otwarcia:</b> 2022
+						<br>
+						<b>Wysokość:</b> 133 metry
+					</p>
+					<div class="lokalizacja"><a><b>Lokalizacja:</b> Quito, Ekwador</a></div>
+				</div>
+			</div>
+			<div class="flaga" style="text-align: center; vertical-align: middle; border-left-color: #00aabd;">
+				<img src="Ekwador.png">
+				<a style="width: 100%;">Quito</a>
+			</div>
+
+			<div class="imagegrid">
+				<div class="row">
+					<div class="column">
+						<img src="Iqon1.jpg">
+						<img src="Iqon2.jpg">
+					</div>
+					<div class="column">
+						<img src="Iqon3.jpg">
+						<img src="Iqon4.jpg">
+					</div>
+					<div class="column">
+						<img src="Iqon5.jpg">
+						<img src="Iqon6.jpg">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="responsivethree" id="googleid">
+			<div class="ikonka" style="flex: 20%;"><img src="Google.png"></div>
+			<div class="konstrukcja" style="border-left-color: #00aabd; flex: 65%;">
+					
+				<div class="opisbudynku">
+					<div class="buildname" style="color: #00aabd;">Siedziba Google <b style="font-size: 50%;">- centrala firmy</b></div>
+					<p style="line-height: 1.5;">
+						<b>Data otwarcia:</b> 2022
+						<br>
+						<b>Powierzchnia:</b> 350000 m<sup>2</sup>
+					</p>
+					<div class="lokalizacja"><a><b>Lokalizacja:</b> Mountain View, USA</a></div>
+				</div>
+			</div>
+			<div class="flaga" style="text-align: center; vertical-align: middle; border-left-color: #00aabd;">
+				<img src="USA.png">
+				<a style="width: 100%;">Mountain View</a>
+			</div>
+
+			<div class="imagegrid">
+				<div class="row">
+					<div class="column">
+						<img src="Google1.jpg">
+						<img src="Google2.jpg">
+					</div>
+					<div class="column">
+						<img src="Google3.jpg">
+						<img src="Google4.jpg">
+					</div>
+					<div class="column">
+						<img src="Google5.jpg">
+						<img src="Google6.jpg">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="form" id="ankietaid">
+			<p>Do jakiego przedziału wiekowego należysz?</p>
+			<form>
+				<input type="radio" id="dz" name="fav_language" value="dzieci">
+				<label for="1"><18</label><br>
+				<input type="radio" id="ml" name="fav_language" value="mlodzi">
+				<label for="2">18-29</label><br>
+				<input type="radio" id="mi" name="fav_language" value="mid">
+				<label for="3">30-49</label><br>
+				<input type="radio" id="se" name="fav_language" value="senior">
+				<label for="4">50-79</label><br>
+				<input type="radio" id="em" name="fav_language" value="emeryt">
+				<label for="5">>80</label>
+			</form>
+			<p>Które budynki Ci się najbardziej spodobały?</p>
+			<form>
+			  	<input type="checkbox" id="b1" name="b1" value="LH">
+			 	<label for="b1"><img src="LEGOHouse3.png" style="width: 5%; margin: 1%;"> LEGO House</label><br>
+			  	<input type="checkbox" id="b2" name="b2" value="Cop">
+			  	<label for="b2"><img src="Copenhill.png" style="width: 5%; margin: 1%;"> CopenHill</label><br>
+			  	<input type="checkbox" id="b3" name="b3" value="Iq">
+			 	<label for="b3"><img src="IQON.png" style="width: 5%; margin: 1%;"> IQON Residences</label><br>
+			  	<input type="checkbox" id="b4" name="b4" value="Gg">
+			  	<label for="b4"><img src="Google.png" style="width: 5%; margin: 1%;"> Siedziba Google</label><br>
+
+			  	<input type="checkbox" id="b5" name="b5" value="He">
+			 	<label for="b5"><img src="Heydar.png" style="width: 5%; margin: 1%;"> Heydar Aliyev Center</label><br>
+			  	<input type="checkbox" id="b6" name="b6" value="Be">
+			  	<label for="b6"><img src="BEEAH.png" style="width: 5%; margin: 1%;"> Siedziba BEEAH</label><br>
+			  	<input type="checkbox" id="b7" name="b7" value="Ha">
+			 	<label for="b7"><img src="Havenhuis.png" style="width: 5%; margin: 1%;"> Havenhuis</label><br>
+			  	<input type="checkbox" id="b8" name="b8" value="Pe">
+			  	<label for="b8"><img src="Pekin.png" style="width: 5%; margin: 1%;"> Lotnisko w Pekinie</label><br>
+
+			  	<input type="checkbox" id="b9" name="b9" value="Oc">
+			 	<label for="b9"><img src="Oculus.png" style="width: 5%; margin: 1%;"> Oculus</label><br>
+			  	<input type="checkbox" id="b10" name="b10" value="Re">
+			  	<label for="b10"><img src="Reggio.png" style="width: 5%; margin: 1%;"> Reggio Mediopadana</label><br>
+			  	<input type="checkbox" id="b11" name="b11" value="Mi">
+			 	<label for="b11"><img src="Milwaukee.png" style="width: 5%; margin: 1%;"> Muzeum sztuki w Milwaukee</label><br>
+			  	<input type="checkbox" id="b12" name="b12" value="Sh">
+			  	<label for="b12"><img src="SHARQ.png" style="width: 5%; margin: 1%;"> SHARQ Crossing</label><br>
+			  	<br>
+			</form>
+
+			<label for="email">Podaj swój adres e-mail:</label>
+			<input type="text" id="mail" onkeyup="validateEmail()">
+			<span id="emailerror" style="display: none;">Podaj prawidłowy e-mail</span>
+			<button onclick="return validateForm()">Wyślij</button>
+			<span class="error" id="submiterror" style="display: none;">Nieprawidłowe dane</span>
+
+		</section>
+	<div style="width: 100%; border-radius: 10px; background-color: /*grey*/ #b5b5b5; height: 50px; margin-top: 50px; padding-top: 1px;">
+		<p style="color: white; margin-left: 15px;">Copyright &copy: Szymon Paja 2023</p>
+	</div>
+</section> <!--mainbuttons-->
+</font>
+	<script>
+		function backhome() {
+			var main = document.getElementsByClassName("glowna");
+			for (let m of main) {
+				m.style.display = "inherit";
+			}
+			var main2 = document.getElementsByClassName("responsivetwo");
+			for (let m of main2) {
+				m.style.display = "none";
+			}
+			var main3 = document.getElementsByClassName("responsivethree");
+			for (let m of main3) {
+				m.style.display = "none";
+			}
+			var main4 = document.getElementsByClassName("form");
+			for (let m of main4) {
+				m.style.display = "none";
+			}
+			/*var element = document.getElementById(name);
+			element.style.display = "flex";*/
+		}
+		//reset("big");
+		
+
+		var homebutton = document.getElementById("homeid");
+		homebutton.addEventListener("click", () => {backhome()});
+
+		function archiclick(name) {
+			var main = document.getElementsByClassName("glowna");
+			for (let m of main) {
+				m.style.display = "none";
+			}
+			var element = document.getElementById(name);
+			element.style.display = "flex";
+		}
+		var bigbutton = document.getElementById("big");
+		bigbutton.addEventListener("click", () => {archiclick("bigid")});
+
+		var zahabutton = document.getElementById("zaha");
+		zahabutton.addEventListener("click", () => {archiclick("zahaid")});
+
+		var santiagobutton = document.getElementById("santiago");
+		santiagobutton.addEventListener("click", () => {archiclick("santiagoid")});
+
+		function buildclick(name) {
+			var main = document.getElementsByClassName("glowna");
+			for (let m of main) {
+				m.style.display = "none";
+			}
+			var main2 = document.getElementsByClassName("responsivetwo");
+			for (let m of main2) {
+				m.style.display = "none";
+			}
+			var element = document.getElementById(name);
+			element.style.display = "flex";
+		}
+
+		var oculusbutton = document.getElementById("oculus");
+		oculusbutton.addEventListener("click", () => {buildclick("oculusid")});
+
+		var milwaukeebutton = document.getElementById("milwaukee");
+		milwaukeebutton.addEventListener("click", () => {buildclick("milwaukeeid")});
+
+		var reggiobutton = document.getElementById("reggio");
+		reggiobutton.addEventListener("click", () => {buildclick("reggioid")});
+
+		var sharqbutton = document.getElementById("sharq");
+		sharqbutton.addEventListener("click", () => {buildclick("sharqid")});
+
+		var heydarbutton = document.getElementById("heydar");
+		heydarbutton.addEventListener("click", () => {buildclick("heydarid")});
+
+		var pekinbutton = document.getElementById("pekin");
+		pekinbutton.addEventListener("click", () => {buildclick("pekinid")});
+
+		var havenbutton = document.getElementById("havenhuis");
+		havenbutton.addEventListener("click", () => {buildclick("havenid")});
+
+		var beeahbutton = document.getElementById("beeah");
+		beeahbutton.addEventListener("click", () => {buildclick("beeahid")});
+
+		var legobutton = document.getElementById("lego");
+		legobutton.addEventListener("click", () => {buildclick("legoid")});
+
+		var iqonbutton = document.getElementById("iqon");
+		iqonbutton.addEventListener("click", () => {buildclick("iqonid")});
+
+		var copenhillbutton = document.getElementById("copenhill");
+		copenhillbutton.addEventListener("click", () => {buildclick("copenhillid")});
+
+		var googlebutton = document.getElementById("google");
+		googlebutton.addEventListener("click", () => {buildclick("googleid")});
+
+
+		function dropclick(name) {
+			var main = document.getElementsByClassName("glowna");
+			for (let m of main) {
+				m.style.display = "none";
+			}
+			var main2 = document.getElementsByClassName("responsivetwo");
+			for (let m of main2) {
+				m.style.display = "none";
+			}
+			var main3 = document.getElementsByClassName("responsivethree");
+			for (let m of main3) {
+				m.style.display = "none";
+			}
+			var main4 = document.getElementsByClassName("form");
+			for (let m of main4) {
+				m.style.display = "none";
+			}
+			var element = document.getElementById(name);
+			element.style.display = "flex";
+		}
+
+		var reggiodbutton = document.getElementById("reggiodrop");
+		reggiodbutton.addEventListener("click", () => {dropclick("reggioid")});
+
+		var milwaukeedbutton = document.getElementById("milwaukeedrop");
+		milwaukeedbutton.addEventListener("click", () => {dropclick("milwaukeeid")});
+
+		var oculusdbutton = document.getElementById("oculusdrop");
+		oculusdbutton.addEventListener("click", () => {dropclick("oculusid")});
+
+		var sharqdbutton = document.getElementById("sharqdrop");
+		sharqdbutton.addEventListener("click", () => {dropclick("sharqid")});
+
+		var heydardbutton = document.getElementById("heydardrop");
+		heydardbutton.addEventListener("click", () => {dropclick("heydarid")});
+
+		var pekindbutton = document.getElementById("pekindrop");
+		pekindbutton.addEventListener("click", () => {dropclick("pekinid")});
+
+		var havendbutton = document.getElementById("havenhuisdrop");
+		havendbutton.addEventListener("click", () => {dropclick("havenid")});
+
+		var beeahdbutton = document.getElementById("beeahdrop");
+		beeahdbutton.addEventListener("click", () => {dropclick("beeahid")});
+
+		var legodbutton = document.getElementById("legodrop");
+		legodbutton.addEventListener("click", () => {dropclick("legoid")});
+
+		var iqondbutton = document.getElementById("iqondrop");
+		iqondbutton.addEventListener("click", () => {dropclick("iqonid")});
+
+		var copenhilldbutton = document.getElementById("copenhilldrop");
+		copenhilldbutton.addEventListener("click", () => {dropclick("copenhillid")});
+
+		var googledbutton = document.getElementById("googledrop");
+		googledbutton.addEventListener("click", () => {dropclick("googleid")});
+
+		function formclick() {
+			var main = document.getElementsByClassName("form");
+			for (let m of main) {
+				m.style.display = "inherit";
+			}
+			var main2 = document.getElementsByClassName("responsivetwo");
+			for (let m of main2) {
+				m.style.display = "none";
+			}
+			var main3 = document.getElementsByClassName("responsivethree");
+			for (let m of main3) {
+				m.style.display = "none";
+			}
+			
+			var main4 = document.getElementsByClassName("glowna");
+			for (let m of main4) {
+				m.style.display = "none";
+			}
+		}
+
+		var ankietabutton = document.getElementById("ankietanav");
+		ankietabutton.addEventListener("click", () => {formclick("ankietaid")});
+
+		//Walidacja formularza
+		var emailError = document.getElementById("emailerror");
+		var submitError = document.getElementById("submiterror");
+
+
+		function validateEmail(){
+		    var email = document.getElementById("mail").value;
+			var inputemail = document.getElementById("mail");
+
+		    if(email.length == 0){
+		        emailError.innerHTML = "Email jest wymagany";
+		        emailError.style.display = "block";
+		        inputemail.style.backgroundColor = "red";
+		        return false;
+		    }
+
+		    if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+		        emailError.innerHTML = "Email nieprawidłowy";
+		        emailError.style.display = "block";
+		        inputemail.style.backgroundColor = "red";
+		        return false;
+		    }
+
+		    inputemail.style.backgroundColor = "lightgreen";
+		    emailError.style.display = "none";
+		    return true;
+		}
+
+		function validateForm(){
+		    if(!validateEmail()){
+		        submitError.style.display = "block";
+		        submitError.innerHTML = "Napraw błędy";
+		        setTimeout(function(){submitError.style.display = "none"}, 5000)
+		        return false;
+		    }
+
+		}
+
+	</script>
+	
+</body>
+
+
+</html>
